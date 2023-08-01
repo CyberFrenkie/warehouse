@@ -5,6 +5,11 @@
     <div class="heading col-12">
         <h1>STOCK Table</h1>
     </div>
+
+    <div class="export-btn">
+        <a href="{{ route('export') }}" class="btn btn-primary">Export to Excel</a>
+
+    </div>
     
 
     <table class="table col-12">

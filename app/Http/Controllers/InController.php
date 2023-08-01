@@ -39,9 +39,7 @@ class InController extends Controller
 
         $existingStockItem = Stock::where('name_SH', $validatedData['name_SH'])
         ->where('name_EN', $validatedData['name_EN'])
-        ->where('manufacturer', $validatedData['manufacturer'])
         ->where('model', $validatedData['model'])
-        ->where('location', $validatedData['location'])
         ->where('sap_number', $validatedData['sap_number'])
         ->first();
 

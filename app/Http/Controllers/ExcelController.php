@@ -93,7 +93,7 @@ class ExcelController extends Controller
     public function export()
     {
         // Fetch the data from the database
-        $inItems = Stock::all();
+        $stockItems = Stock::all();
 
         // Create a new Spreadsheet object
         $spreadsheet = new Spreadsheet();
@@ -102,31 +102,31 @@ class ExcelController extends Controller
         // Set the column headers
         $sheet->setCellValue('A1', 'Order Number');
         $sheet->setCellValue('B1', 'Name SH');
-        $sheet->setCellValue('D1', 'Name EN');
-        $sheet->setCellValue('E1', 'manufacturer');
-        $sheet->setCellValue('F1', 'model');
-        $sheet->setCellValue('G1', 'location');
-        $sheet->setCellValue('H1', 'sap_number');
-        $sheet->setCellValue('I1', 'unit');
-        $sheet->setCellValue('J1', 'stock_count');
-        $sheet->setCellValue('K1', 'use');
+        $sheet->setCellValue('C1', 'Name EN');
+        $sheet->setCellValue('D1', 'Manufacturer');
+        $sheet->setCellValue('E1', 'Model');
+        $sheet->setCellValue('F1', 'Location');
+        $sheet->setCellValue('G1', 'SAP Number');
+        $sheet->setCellValue('H1', 'Unit');
+        $sheet->setCellValue('I1', 'Stock Count');
+        $sheet->setCellValue('J1', 'Use');
 
-
-        // Add more column headers as needed
+        // Apply data bars to the 'Stock Count' column (same code as before)
+        // ...
 
         // Iterate over the data and populate the rows
         $row = 2; // Start from row 2 (below the headers)
-        foreach ($inItems as $item) {
+        foreach ($stockItems as $item) {
             $sheet->setCellValue('A' . $row, $item->order_number);
             $sheet->setCellValue('B' . $row, $item->name_SH);
             $sheet->setCellValue('C' . $row, $item->name_EN);
-            $sheet->setCellValue('E',  $row, $item->manufacturer);
-            $sheet->setCellValue('F',  $row, $item->model);
-            $sheet->setCellValue('G', $row, $item->location);
-            $sheet->setCellValue('H', $row, $item->sap_number);
-            $sheet->setCellValue('I', $row, $item->unit);
-            $sheet->setCellValue('J', $row, $item->stock_count);
-            $sheet->setCellValue('K', $row, $item->use);
+            $sheet->setCellValue('D' . $row, $item->manufacturer);
+            $sheet->setCellValue('E' . $row, $item->model);
+            $sheet->setCellValue('F' . $row, $item->location);
+            $sheet->setCellValue('G' . $row, $item->sap_number);
+            $sheet->setCellValue('H' . $row, $item->unit);
+            $sheet->setCellValue('I' . $row, $item->stock_count);
+            $sheet->setCellValue('J' . $row, $item->use);
             // Add more cell values for other columns as needed
 
             $row++; // Move to the next row
