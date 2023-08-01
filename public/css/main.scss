@@ -1,0 +1,137 @@
+@import 'mixins/mixins.scss';
+@import 'colors/colors.scss';
+
+.main{
+    min-width: 1100px;
+    height: 100%
+}
+.wrapper{
+    min-height: 100vh;
+    @include flex-center(space-between,center,column);
+}
+
+.header{
+    width: 100%;
+}
+.main-wrapper{
+    @include full-height;
+    @include flex-center(space-between,center,column);
+    background-image: url('/img/zijin.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.navbar-nav{
+    width: 100%;
+    @include flex-center(flex-end,center,row);
+}
+.navbar,.footer{
+    background-color: $color--vivid-cyan-blue;
+    a{
+        color: $color-black;
+        font-size: 20px;
+    }
+}
+.warehouse,.filtration{
+    @include flex-center(center,space-between,row)
+}
+.logo{
+    max-height: 50px;
+}
+
+
+.main{
+    width: 100%;
+    height: 100%;
+    .heading{
+        padding: 20px;
+        background-color: $color--vivid-cyan-blue;
+        h1{
+           text-shadow: 0 0 15px $color-white;
+           font-size: 70px;
+        }
+    }
+
+}
+
+.footer{
+    @include flex-center(center,center,column);
+    width: 100%;
+    
+}
+
+.nav-link{
+    box-shadow: 0 0 25px $color--vivid-purple;
+    margin: 0 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    width: 100px;
+    text-align: center;
+    &:hover{
+        scale: 1.2;
+        color: $color-orange;
+    }
+}
+
+.section-link{
+    padding: 20px;
+}
+
+
+
+
+.addbtn{
+    margin: 50px 0;
+    height: 80px;
+    width: 100%;
+    @include flex-center(space-between,center,row)
+}
+.add{
+    padding: 20px;
+    font-size: 30px;
+    border: 2px solid $color-black;
+    border-radius: 25px;
+    background-color: $color--vivid-green-cyan;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        font-size: 35px;
+        
+    }
+}
+
+.stock{
+    font-size: 30px;
+    background-color: $color-green;
+    color: $color-green;
+}
+.table{
+    
+    padding: 20px;
+    margin: 20px 0;
+
+    
+}
+
+tr{
+    background-color: $color--pale-cyan-blue;
+    &:nth-child(even){
+        background-color: $color--cyan-bluish-gray;
+    }
+}
+
+
+.footer{
+    height: 50px;
+}
+.copy-link{
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    
+    &:hover{
+        color: $color--vivid-red;
+        text-shadow: 0 0 15px $color-white;
+    }
+}

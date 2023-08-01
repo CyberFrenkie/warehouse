@@ -1,0 +1,145 @@
+.main {
+  min-width: 1100px;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/img/zijin.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar, .footer {
+  background-color: #0693e3;
+}
+.navbar a, .footer a {
+  color: #000000;
+  font-size: 20px;
+}
+
+.warehouse, .filtration {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: row;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+.main .heading {
+  padding: 20px;
+  background-color: #0693e3;
+}
+.main .heading h1 {
+  text-shadow: 0 0 15px #ffffff;
+  font-size: 70px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-link {
+  box-shadow: 0 0 25px #9b51e0;
+  margin: 0 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  width: 100px;
+  text-align: center;
+}
+.nav-link:hover {
+  scale: 1.2;
+  color: #b15e00;
+}
+
+.section-link {
+  padding: 20px;
+}
+
+.addbtn {
+  margin: 50px 0;
+  height: 80px;
+}
+
+.add {
+  padding: 20px;
+  font-size: 30px;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  background-color: #00d084;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.add:hover {
+  font-size: 35px;
+}
+
+.stock {
+  font-size: 30px;
+  background-color: #00af0f;
+  color: #00af0f;
+}
+
+.table {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+tr {
+  background-color: #8ed1fc;
+}
+tr:nth-child(even) {
+  background-color: #abb8c3;
+}
+
+.footer {
+  height: 50px;
+}
+
+.copy-link {
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+.copy-link:hover {
+  color: #cf2e2e;
+  text-shadow: 0 0 15px #ffffff;
+}
+
+/*# sourceMappingURL=main.csss.map */

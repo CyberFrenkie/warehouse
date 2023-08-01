@@ -1,0 +1,16 @@
+@mixin flex-center($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align; 
+    flex-direction: $direction;
+    
+}
+
+@mixin box-param($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin full-height{
+    min-height: 100vh;
+}
