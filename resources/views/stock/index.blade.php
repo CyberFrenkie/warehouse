@@ -36,17 +36,25 @@
             <tr>
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->order_number }}</td>
-                <td>{{ $item->name_SH }}</td>
-                <td>{{ $item->name_EN }}</td>
-                <td>{{ $item->manufacturer }}</td>
-                <td>{{ $item->model }}</td>
-                <td>{{ $item->location }}</td>
+                <td><a href="{{ route('stock.filter', ['name_SH' => $item->name_SH]) }}">{{ $item->name_SH }}</a></td>
+                <td><a href="{{ route('stock.filter', ['name_EN' => $item->name_EN]) }}">{{ $item->name_EN }}</a></td>
+                <td><a href="{{ route('stock.filter', ['manufacturer' => $item->manufacturer]) }}">{{ $item->manufacturer }}</a></td>
+                <td><a href="{{ route('stock.filter', ['model' => $item->model]) }}">{{ $item->model }}</a></td>
+                <td><a href="{{ route('stock.filter', ['location' => $item->location]) }}">{{ $item->location }}</a></td>
                 <td>{{ $item->sap_number }}</td>                
                 <td>{{ $item->use }}</td>
                 <td>{{ $item->unit }}</td>
                 <td>{{ $item->stock_count }}</td>
                 <td>{{ $item->created_at }}</td>
                 <td>{{ $item->updated_at }}</td>
+                <td>
+                    <a href="{{ route('stock.edit', $item->id) }}" class="btn btn-primary">Edit</a>
+                    <form action="{{ route('stock.destroy', $item->id) }}" method="POST" style="display:inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>

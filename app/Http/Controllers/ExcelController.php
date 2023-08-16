@@ -111,33 +111,30 @@ class ExcelController extends Controller
         $sheet->setCellValue('I1', 'Stock Count');
         $sheet->setCellValue('J1', 'Use');
 
-        // Apply data bars to the 'Stock Count' column (same code as before)
-        // ...
+       
 
         // Iterate over the data and populate the rows
         $row = 2; // Start from row 2 (below the headers)
         foreach ($stockItems as $item) {
             $sheet->setCellValue('A' . $row, $item->order_number);
             $sheet->setCellValue('B' . $row, $item->name_SH);
-            $sheet->setCellValue('C' . $row, $item->name_EN);
-            $sheet->setCellValue('D' . $row, $item->manufacturer);
-            $sheet->setCellValue('E' . $row, $item->model);
+            $sheet->setCellValue('C' . $row, $item->name_EN);            
+            $sheet->setCellValue('E' . $row, $item->manufacturer);
+            $sheet->setCellValue('D' . $row, $item->model);
             $sheet->setCellValue('F' . $row, $item->location);
             $sheet->setCellValue('G' . $row, $item->sap_number);
             $sheet->setCellValue('H' . $row, $item->unit);
             $sheet->setCellValue('I' . $row, $item->stock_count);
             $sheet->setCellValue('J' . $row, $item->use);
-            // Add more cell values for other columns as needed
 
-            $row++; // Move to the next row
+            $row++; 
         }
 
         // Create a new Excel writer and save the file
         $writer = new Xlsx($spreadsheet);
-        $filename = 'stock_items.xlsx'; // Specify the filename
+        $filename = 'stock_items.xlsx';
         $writer->save($filename);
-
-        // Return the Excel file as a response
+        
         return response()->download($filename)->deleteFileAfterSend();
     }
 }

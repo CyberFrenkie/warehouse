@@ -40,3 +40,11 @@ Route::post('/upload-excel', [ExcelController::class, 'upload'])->name('upload.e
 
 Route::get('/export', [ExcelController::class ,'export'])->name('export');
 
+Route::get('/stock/{id}/edit', [StockController::class, 'edit'])->name('stock.edit');
+Route::put('/stock/{id}', [StockController::class, 'update'])->name('stock.update');
+Route::delete('/stock/{id}', [StockController::class, 'destroy'])->name('stock.destroy');
+
+
+Route::get('/stock/filter', [StockController::class, 'filter'])->name('stock.filter');
+
+
