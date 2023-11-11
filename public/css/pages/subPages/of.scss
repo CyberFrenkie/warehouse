@@ -1,0 +1,34 @@
+.of-wrapper{
+    @include calc-height;
+    .levels{
+        @include flex-center(center, center, column);
+        height: 80%;
+    }
+   .level-list{
+        @include flex-center(space-between, center, column);
+        height: 100%;
+        width: 100%;
+        @include reset-pm;
+
+        .list-item-link{
+            
+            @include flex-center(center, center, column);
+            @include reset-text;
+            margin: 10px;
+            height: 100px;
+            
+            width: 100%;        
+            background-image: url('/img/filtraza.jpg');
+            background-position: 30% ;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+
+            .list-item{
+                font-size: 50px;           
+                color: black;
+            }
+          
+        }
+   }
+}
