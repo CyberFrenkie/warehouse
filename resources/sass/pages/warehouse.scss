@@ -19,8 +19,12 @@
     }
     position: relative;
     .f-heading{
-        font-size: $font-size-title-primary;
+        font-size: $font-size-title-primary-large;
         padding: $p-standard;
+        background-color: $color-primary-transparent;
+        margin: auto;
+        width: 600px;
+        border-radius: $border-radius;
     }
 
     .section-link{
