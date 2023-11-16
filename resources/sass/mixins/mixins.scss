@@ -1,0 +1,197 @@
+// Defaults
+
+@mixin reset-default-text {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@mixin reset-p-m {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin absolute-position($position, $left, $bottom, $translate) {
+    position: $position;
+    left: $left;
+    bottom: $bottom;
+    transform: translateY($translate);
+}
+
+@mixin pseudo($top, $bottom, $left, $right, $display) {
+    display: $display;
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    content: "";
+}
+
+@mixin content-width {
+    max-width: 400px;
+}
+
+@mixin overlay {
+    &::before {
+        @include pseudo(0, 0, 0, 0, block);
+        background-color: $color-black;
+        opacity: 0.5;
+        z-index: 1000;
+    }
+}
+
+// Buttons  &  Links
+
+@mixin btn-primary {
+    @include hover-transition;
+
+    width: $btn-width;
+    background-color: $color-black-transparent-high;
+    font-size: $font-size-btn;
+    color: $btn-color-primary;
+    text-shadow: 0 0 5px black;
+    font-weight: $font-weight-thick;
+    margin: $m-standard;
+    border-radius: $border-radius;
+}
+
+@mixin link-primary {
+    text-decoration: none;
+    color: $color-link;
+    font-size: $font-size-btn;
+    font-weight: $font-weight-medium;
+}
+
+@mixin cta{
+    @include btn-primary;
+    background-color: $border-bottom--hover--color;
+    padding: 13px 20px;
+    margin-top: 20px;
+    width: 190px;
+    color: $color-primary;
+    border-radius: $border-radius-reduced;
+    &:hover {
+        transition: $transition;
+        background: $nav-color--grey;
+        color: $color-black !important;
+    }
+}
+
+// Animation & Transition
+
+@mixin arrow-animation {
+    &:hover .fa-arrow-right {
+        transform: translateX(15px);
+        transition: 0.2s;
+    }
+}
+
+@mixin left-arrow-animation {
+    &:hover .fa-arrow-left {
+        transform: translateX(-15px);
+        transition: 0.2s;
+    }
+}
+
+@mixin scale-transition {
+    transition: $transition;
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+@mixin hover-transition {
+    transition: $transition;
+    &:hover {
+        color: $color-black;
+        background-color: $btn-color-primary;;
+        text-shadow: 0 0 5px $color-primary;
+    }
+}
+
+@mixin link-hover-transition {
+    border-bottom: 2px solid transparent;
+    transition: $transition;
+    &:hover {
+        border-bottom: 2px solid $color-link;
+    }
+}
+
+// Cards
+
+@mixin first-content-card {
+    .card {
+        height: 600px;
+        padding: 0 20px;
+        margin: 5px 0;
+    }
+    .card-img,
+    .link {
+        height: $full-height;
+    }
+    .card-img {
+        object-fit: cover;
+    }
+}
+
+@mixin news-card-img-param {
+    height: 200px;
+    border-bottom-left-radius: 0;
+}
+
+@mixin card-default {
+    @include reset-p-m;
+    position: relative;
+    border: none;
+    background: transparent;
+
+    .card-img {
+        border-radius: $border-radius-reduced;
+    }
+}
+
+@mixin card-shadow($radius) {
+    box-shadow: 0px 0px 5px $border-bottom--hover--color;
+    border-radius: $radius;
+}
+
+// Flex
+
+@mixin flex-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+@mixin flex-center-colum {
+    @include flex-center-row;
+    flex-direction: column;
+}
+
+@mixin custom-flex($jc, $ai, $fd) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+//spacing
+
+
+
+@mixin shorten-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+
+@mixin logo-default{
+    height: 50px;
+    width: 200px;
+}
+
+

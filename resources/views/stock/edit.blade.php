@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layout.layout')
 
-@section('content')
+@section('main')
     <h1>Edit Stock Item</h1>
     <form action="{{ route('stock.update', $stockItem->id) }}" method="POST">
         @csrf

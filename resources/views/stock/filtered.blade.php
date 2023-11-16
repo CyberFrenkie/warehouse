@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layout.layout')
 
-@section('content')
+@section('main')
     <h1>Filtered Stock List</h1>
     <table class="table col-12">
         <thead>

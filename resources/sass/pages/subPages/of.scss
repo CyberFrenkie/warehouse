@@ -1,0 +1,59 @@
+.of-wrapper{
+    @include custom-flex(space-around, center, column);
+    min-height: $calc-height;
+
+    .levels{
+        @include flex-center-colum;
+        height: 80%;
+    }
+   .level-list{
+        @include flex-center-colum;
+        @include reset-p-m;
+        @include reset-default-text;
+
+        height: 100%;
+        width: 100%;
+       
+
+        .list-item-link{
+            
+            @include flex-center-colum;
+            @include reset-default-text;
+            position: relative;
+
+            margin: $m-standard;
+            max-height: 150px;            
+            width: 100%;        
+
+            h1{
+                @include flex-center-colum;
+                @include btn-primary;
+                position: absolute;
+                color: white;
+                text-shadow: 0 0 10px black;
+                height: 110%;
+                width: 100%;
+                background-color: $color-black-transparent-mid;
+
+                
+                
+            }
+
+            .list-item{
+                @include custom-flex(center,center,row);
+                max-height: 130px;   
+                width: 100%;
+                font-size: 50px;           
+                color: black;
+            }
+
+            .bckg-img{
+                width: 20%;
+                background-position: center;
+
+
+            }
+          
+        }
+   }
+}

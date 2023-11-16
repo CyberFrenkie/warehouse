@@ -1,8 +1,7 @@
+@extends('layout.layout')
 
-@extends('layout')
 
-
-@section('content')
+@section('main')
 
 <h1>Create OUT Item</h1>
 

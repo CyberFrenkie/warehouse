@@ -1,0 +1,21 @@
+.navbar{
+    height: $nav-height;
+    .collapse{
+        @include custom-flex(space-between,center,row);
+    }
+    .navbar-nav{
+        width: auto;
+        @include reset-p-m;
+
+        .nav-link{
+
+
+            @include btn-primary;
+            
+
+        }
+    }
+    .logo{
+        @include logo-default;
+    }
+}

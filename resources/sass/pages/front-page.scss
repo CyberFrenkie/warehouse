@@ -1,0 +1,41 @@
+.front-page-wrap{
+    @include custom-flex(space-between,center,row);
+    position: relative;
+    height: $calc-height;
+
+
+    .filtration,.warehouse{
+        height: 100%;
+        position: relative;
+        @include overlay;
+
+    }
+    .bckg-img{
+        height: 100%;
+        width: 100%;
+    }
+    .section-link{
+        @include reset-text;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-black;
+        z-index: 1000;
+       
+
+        h1{
+            @include hover-transition;
+            padding: 10px;
+            font-size: $font-size-title-primary;
+            box-shadow: 0 0 15px $color-black;
+            border-radius: $border-radius;
+            background-color: $color-primary-transparent;
+        }
+    }
+    .one{
+        left: 30%;
+    }
+    .two{
+        right: 30%;
+    }
+}

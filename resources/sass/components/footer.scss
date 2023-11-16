@@ -1,0 +1,6 @@
+.footer{
+    @include flex-center-row;
+
+    background-color: $color-black;
+    height: $footer-height;
+}

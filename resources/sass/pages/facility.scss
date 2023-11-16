@@ -1,0 +1,46 @@
+.facility-wrapper{
+    @include reset-p-m;
+    height: $calc-height;
+
+
+    @include custom-flex(space-around,center,column);
+
+    .f-heading{
+        font-size: $font-size-title-primary;
+        padding: $p-standard;
+    }
+
+    .section-link{
+        height: 100%;
+        @include reset-text;
+
+        h1{
+            @include hover-transition;
+
+            margin: 5px 10px;
+            font-size: $font-size-title-primary;
+            border-radius: $border-radius;
+            text-align: center;
+
+            background-color: $color-black-transparent-high;
+
+            color: $btn-color-primary;
+            text-shadow: 0 0 5px black;
+            font-weight: $font-weight-thick;
+            margin: $m-standard;
+            border-radius: $border-radius;
+           
+            
+        }
+    }
+
+    .bckg-img{
+        width: auto;
+        max-height: 350px
+    }
+
+    .pool-wrap{
+        @include reset-p-m;
+    }
+
+}

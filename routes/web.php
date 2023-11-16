@@ -12,8 +12,8 @@ use App\Http\Controllers\StockController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
@@ -21,6 +21,26 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/facility', function () {
+    return view('facility.facility');
+});
+
+Route::get('/warehouse', function () {
+    return view('warehouse.warehouse');
+});
+
+
+Route::get('/nf', function () {
+    return view('facility.nf.nf');
+});
+
+Route::get('/of', function () {
+    return view('facility.old.of');
+});
+
+
+
+// --------- WAREHOUSE --------------
 
 
 Route::get('/in', [InController::class, 'index'])->name('in.index');
@@ -46,5 +66,3 @@ Route::delete('/stock/{id}', [StockController::class, 'destroy'])->name('stock.d
 
 
 Route::get('/stock/filter', [StockController::class, 'filter'])->name('stock.filter');
-
-

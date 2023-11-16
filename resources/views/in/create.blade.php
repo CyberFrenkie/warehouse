@@ -1,8 +1,8 @@
 
-@extends('layout')
+@extends('layout.layout')
 
 
-@section('content')
+@section('main')
 
 <h1>Create IN Item</h1>
 

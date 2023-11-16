@@ -1,0 +1,49 @@
+.warehouse-wrapper{
+    
+    min-height: $calc-height;
+    @include reset-p-m;
+    // background-image: url('../../../public/img/warehouse2.jpg');
+    // background-size: cover;
+    // background-position: center;
+    .container{
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto;
+        @include custom-flex(space-around,space-around,column);
+    }
+    img{
+        height: $calc-height;
+
+    }
+    position: relative;
+    .f-heading{
+        font-size: $font-size-title-primary;
+        padding: $p-standard;
+    }
+
+    .section-link{
+        height: 100%;
+        @include reset-text;
+        z-index: 10000;
+        h1{
+            @include hover-transition;
+
+            margin: 5px 10px;
+            font-size: $font-size-title-primary;
+            border-radius: $border-radius;
+            text-align: center;
+
+            background-color: $color-primary-transparent;
+
+            color: $btn-color-primary;
+            text-shadow: 0 0 5px black;
+            font-weight: $font-weight-thick;
+            margin: $m-standard;
+            border-radius: $border-radius;
+           
+            
+        }
+    }
+}

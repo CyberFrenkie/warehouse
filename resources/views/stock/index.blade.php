@@ -1,7 +1,7 @@
-@extends('layout')
+@extends('layout.layout')
 
 
-@section('content')
+@section('main')
     <div class="heading col-12">
         <h1>STOCK Table</h1>
     </div>
